@@ -31,7 +31,7 @@ def product(n, term):
     162
     """
     "*** YOUR CODE HERE ***"
-
+    
 
 def accumulate(combiner, base, n, term):
     """Return the result of combining the first n terms in a sequence and base.
