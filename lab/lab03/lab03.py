@@ -45,7 +45,10 @@ def repeated(f, n):
     True
     """
     "*** YOUR CODE HERE ***"
-
+    if n == 0:
+      return lambda x : x
+    else:
+      return compose1(f, repeated(f, n-1))
 
 def num_eights(x):
     """Returns the number of times 8 appears as a digit of x.
@@ -69,6 +72,12 @@ def num_eights(x):
     True
     """
     "*** YOUR CODE HERE ***"
+    if x == 0:
+      return 0
+    elif x % 10 == 8:
+      return 1 + num_eights(x // 10)
+    else:
+      return num_eights(x // 10)
 
 
 def pingpong(n):
