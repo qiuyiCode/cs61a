@@ -113,4 +113,11 @@ def pingpong(n):
     True
     """
     "*** YOUR CODE HERE ***"
-
+    def helper(i,state,direction):
+      if i == n:
+        return state
+      if num_eights(i) == 0 and i % 8 != 0:
+        return helper(i + 1,state + direction,direction)
+      else:
+        return helper(i + 1,state - direction,direction*-1)
+    return helper(1,1,1)
